@@ -66,6 +66,9 @@ endif
 # Assert
 TARGET_OTA_ASSERT_DEVICE := odin2
 
+# Kernel
+include device/ayn/odin2_ack/modules.mk
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
