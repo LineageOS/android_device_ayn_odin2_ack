@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+AB_OTA_UPDATER := true
+
 include device/ayn/qcs8550-ack/qcs8550.mk
 
 PRODUCT_CHARACTERISTICS   := tv
@@ -16,3 +18,32 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+# Updater
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+AB_OTA_PARTITIONS += \
+    boot \
+    init_boot \
+    odm \
+    product \
+    recovery \
+    system \
+    system_dlkm \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vendor \
+    vendor_boot \
+    vendor_dlkm
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_vendor=true \
+    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
+    FILESYSTEM_TYPE_vendor=ext4 \
+    POSTINSTALL_OPTIONAL_vendor=true
+AB_OTA_POSTINSTALL_CONFIG += \
+    FILESYSTEM_TYPE_product=ext4 \
+    POSTINSTALL_PATH_product=bin/ayn_bootloader_payload_updater \
+    RUN_POSTINSTALL_product=true
+PRODUCT_PACKAGES += \
+    ayn_bootloader_payload_updater \
+    checkpoint_gc
