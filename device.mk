@@ -11,6 +11,9 @@ PRODUCT_CHARACTERISTICS   := tv
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi mdpi hdpi tvdpi
 PRODUCT_AAPT_PREF_CONFIG  := xhdpi
 
+# Inherit from vendor blobs
+$(call inherit-product, vendor/ayn/odin2_ack/odin2_ack-vendor.mk)
+
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
