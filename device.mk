@@ -19,6 +19,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
+# Audio
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom/audioreach-topology
+PRODUCT_PACKAGES += \
+    qcom-sm8550-odin2-tplg
+
 # Updater
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 AB_OTA_PARTITIONS += \
