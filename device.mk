@@ -29,6 +29,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 PRODUCT_PACKAGES += \
     qcom-sm8550-odin2-tplg
 
+# Firmware
+PRODUCT_PACKAGES += \
+    qcom-sm8550-ayn
+
 # Updater
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 AB_OTA_PARTITIONS += \
