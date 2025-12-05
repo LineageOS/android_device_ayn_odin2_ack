@@ -5,6 +5,9 @@
 
 AB_OTA_UPDATER := true
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += device/ayn/odin2_ack
+
 include device/ayn/qcs8550-ack/qcs8550.mk
 
 PRODUCT_CHARACTERISTICS   := tv
@@ -18,6 +21,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+# Audio
+PRODUCT_PACKAGES += \
+    qcom-sm8550-odin2-tplg
 
 # Updater
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
