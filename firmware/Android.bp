@@ -1,0 +1,134 @@
+// Copyright (C) 2025 The Android Open Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+pil_squasher {
+    name: "qcom-sm8550-ayn-cdsp",
+    stem: "cdsp.mbn",
+    mdt: "//vendor/ayn/odin2_ack:cdsp_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:cdsp"],
+    relative_install_path: "qcom/sm8550/ayntec",
+}
+pil_squasher {
+    name: "qcom-sm8550-ayn-cdsp-dtb",
+    stem: "cdsp_dtb.mbn",
+    mdt: "//vendor/ayn/odin2_ack:cdsp_dtb_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:cdsp_dtb"],
+    relative_install_path: "qcom/sm8550/ayntec",
+}
+
+pil_squasher {
+    name: "qcom-sm8550-ayn-odin2-adsp",
+    stem: "adsp.mbn",
+    mdt: "//vendor/ayn/odin2_ack:odin2_adsp_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:odin2_adsp"],
+    relative_install_path: "qcom/sm8550/ayntec/odin2",
+}
+pil_squasher {
+    name: "qcom-sm8550-ayn-odin2-adsp-dtb",
+    stem: "adsp_dtb.mbn",
+    mdt: "//vendor/ayn/odin2_ack:odin2_adsp_dtb_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:odin2_adsp_dtb"],
+    relative_install_path: "qcom/sm8550/ayntec/odin2",
+}
+
+pil_squasher {
+    name: "qcom-sm8550-ayn-odin2mini-adsp",
+    stem: "adsp.mbn",
+    mdt: "//vendor/ayn/odin2_ack:odin2mini_adsp_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:odin2mini_adsp"],
+    relative_install_path: "qcom/sm8550/ayntec/odin2mini",
+}
+pil_squasher {
+    name: "qcom-sm8550-ayn-odin2mini-adsp-dtb",
+    stem: "adsp_dtb.mbn",
+    mdt: "//vendor/ayn/odin2_ack:odin2mini_adsp_dtb_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:odin2mini_adsp_dtb"],
+    relative_install_path: "qcom/sm8550/ayntec/odin2mini",
+}
+
+pil_squasher {
+    name: "qcom-sm8550-ayn-odin2portal-adsp",
+    stem: "adsp.mbn",
+    mdt: "//vendor/ayn/odin2_ack:odin2portal_adsp_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:odin2portal_adsp"],
+    relative_install_path: "qcom/sm8550/ayntec/odin2portal",
+}
+pil_squasher {
+    name: "qcom-sm8550-ayn-odin2portal-adsp-dtb",
+    stem: "adsp_dtb.mbn",
+    mdt: "//vendor/ayn/odin2_ack:odin2portal_adsp_dtb_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:odin2portal_adsp_dtb"],
+    relative_install_path: "qcom/sm8550/ayntec/odin2portal",
+}
+
+pil_squasher {
+    name: "qcom-sm8550-ayn-thor-adsp",
+    stem: "adsp.mbn",
+    mdt: "//vendor/ayn/odin2_ack:thor_adsp_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:thor_adsp"],
+    relative_install_path: "qcom/sm8550/ayntec/thor",
+}
+pil_squasher {
+    name: "qcom-sm8550-ayn-thor-adsp-dtb",
+    stem: "adsp_dtb.mbn",
+    mdt: "//vendor/ayn/odin2_ack:thor_adsp_dtb_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:thor_adsp_dtb"],
+    relative_install_path: "qcom/sm8550/ayntec/thor",
+}
+
+pil_squasher {
+    name: "qcom-sm8550-retroidpocket-rp6-adsp",
+    stem: "adsp.mbn",
+    mdt: "//vendor/ayn/odin2_ack:rp6_adsp_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:rp6_adsp"],
+    relative_install_path: "qcom/sm8550/retroidpocket/rp6",
+}
+pil_squasher {
+    name: "qcom-sm8550-retroidpocket-rp6-adsp-dtb",
+    stem: "adsp_dtb.mbn",
+    mdt: "//vendor/ayn/odin2_ack:rp6_adsp_dtb_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:rp6_adsp_dtb"],
+    relative_install_path: "qcom/sm8550/retroidpocket/rp6",
+}
+
+phony {
+    name: "qcom-sm8550-ayn",
+    required: [
+        "qcom-sm8550-ayn-cdsp",
+        "qcom-sm8550-ayn-cdsp-dtb",
+        "qcom-sm8550-ayn-odin2-adsp",
+        "qcom-sm8550-ayn-odin2-adsp-dtb",
+        "qcom-sm8550-ayn-odin2mini-adsp",
+        "qcom-sm8550-ayn-odin2mini-adsp-dtb",
+        "qcom-sm8550-ayn-odin2portal-adsp",
+        "qcom-sm8550-ayn-odin2portal-adsp-dtb",
+        "qcom-sm8550-ayn-thor-adsp",
+        "qcom-sm8550-ayn-thor-adsp-dtb",
+        "qcom-sm8550-retroidpocket-rp6-adsp",
+        "qcom-sm8550-retroidpocket-rp6-adsp-dtb",
+        "qcom-sm8550-ayn-cdsp.vendor_ramdisk",
+        "qcom-sm8550-ayn-cdsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2-adsp.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2-adsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2mini-adsp.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2mini-adsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2portal-adsp.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2portal-adsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-ayn-thor-adsp.vendor_ramdisk",
+        "qcom-sm8550-ayn-thor-adsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-retroidpocket-rp6-adsp.vendor_ramdisk",
+        "qcom-sm8550-retroidpocket-rp6-adsp-dtb.vendor_ramdisk",
+    ],
+}
