@@ -24,3 +24,177 @@ prebuilt_firmware {
     vendor: true,
     required: [],
 }
+
+// This assumes that the last file in the filegroup is the .mdt
+// Which should remain true for the alphabetically sorted groups created by the Lineage extract
+genrule_defaults {
+    name: "ayn-pil-squasher",
+    tools: ["pil-squasher"],
+    cmd: "$(location pil-squasher) $(out) $$(awk '{print $$NF}' <<< \"$(in)\")",
+}
+
+genrule {
+    name: "qcom-sm8550-ayn-cdsp-genrule",
+    defaults: ["ayn-pil-squasher"],
+    srcs: ["//vendor/ayn/odin2_ack:cdsp"],
+    out: ["cdsp.mbn"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-cdsp",
+    srcs: [":qcom-sm8550-ayn-cdsp-genrule"],
+    dsts: ["qcom/sm8550/ayntec/cdsp.mbn"],
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+genrule {
+    name: "qcom-sm8550-ayn-cdsp-dtb-genrule",
+    defaults: ["ayn-pil-squasher"],
+    srcs: ["//vendor/ayn/odin2_ack:cdsp_dtb"],
+    out: ["cdsp_dtb.mbn"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-cdsp-dtb",
+    srcs: [":qcom-sm8550-ayn-cdsp-dtb-genrule"],
+    dsts: ["qcom/sm8550/ayntec/cdsp_dtb.mbn"],
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+genrule {
+    name: "qcom-sm8550-ayn-odin2-adsp-genrule",
+    defaults: ["ayn-pil-squasher"],
+    srcs: ["//vendor/ayn/odin2_ack:odin2_adsp"],
+    out: ["adsp.mbn"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2-adsp",
+    srcs: [":qcom-sm8550-ayn-odin2-adsp-genrule"],
+    dsts: ["qcom/sm8550/ayntec/odin2/adsp.mbn"],
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+genrule {
+    name: "qcom-sm8550-ayn-odin2-adsp-dtb-genrule",
+    defaults: ["ayn-pil-squasher"],
+    srcs: ["//vendor/ayn/odin2_ack:odin2_adsp_dtb"],
+    out: ["adsp_dtb.mbn"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2-adsp-dtb",
+    srcs: [":qcom-sm8550-ayn-odin2-adsp-dtb-genrule"],
+    dsts: ["qcom/sm8550/ayntec/odin2/adsp_dtb.mbn"],
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+genrule {
+    name: "qcom-sm8550-ayn-odin2mini-adsp-genrule",
+    defaults: ["ayn-pil-squasher"],
+    srcs: ["//vendor/ayn/odin2_ack:odin2mini_adsp"],
+    out: ["adsp.mbn"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2mini-adsp",
+    srcs: [":qcom-sm8550-ayn-odin2mini-adsp-genrule"],
+    dsts: ["qcom/sm8550/ayntec/odin2mini/adsp.mbn"],
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+genrule {
+    name: "qcom-sm8550-ayn-odin2mini-adsp-dtb-genrule",
+    defaults: ["ayn-pil-squasher"],
+    srcs: ["//vendor/ayn/odin2_ack:odin2mini_adsp_dtb"],
+    out: ["adsp_dtb.mbn"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2mini-adsp-dtb",
+    srcs: [":qcom-sm8550-ayn-odin2mini-adsp-dtb-genrule"],
+    dsts: ["qcom/sm8550/ayntec/odin2mini/adsp_dtb.mbn"],
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+genrule {
+    name: "qcom-sm8550-ayn-odin2portal-adsp-genrule",
+    defaults: ["ayn-pil-squasher"],
+    srcs: ["//vendor/ayn/odin2_ack:odin2portal_adsp"],
+    out: ["adsp.mbn"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2portal-adsp",
+    srcs: [":qcom-sm8550-ayn-odin2portal-adsp-genrule"],
+    dsts: ["qcom/sm8550/ayntec/odin2portal/adsp.mbn"],
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+genrule {
+    name: "qcom-sm8550-ayn-odin2portal-adsp-dtb-genrule",
+    defaults: ["ayn-pil-squasher"],
+    srcs: ["//vendor/ayn/odin2_ack:odin2portal_adsp_dtb"],
+    out: ["adsp_dtb.mbn"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2portal-adsp-dtb",
+    srcs: [":qcom-sm8550-ayn-odin2portal-adsp-dtb-genrule"],
+    dsts: ["qcom/sm8550/ayntec/odin2portal/adsp_dtb.mbn"],
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+genrule {
+    name: "qcom-sm8550-ayn-thor-adsp-genrule",
+    defaults: ["ayn-pil-squasher"],
+    srcs: ["//vendor/ayn/odin2_ack:thor_adsp"],
+    out: ["adsp.mbn"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-thor-adsp",
+    srcs: [":qcom-sm8550-ayn-thor-adsp-genrule"],
+    dsts: ["qcom/sm8550/ayntec/thor/adsp.mbn"],
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+genrule {
+    name: "qcom-sm8550-ayn-thor-adsp-dtb-genrule",
+    defaults: ["ayn-pil-squasher"],
+    srcs: ["//vendor/ayn/odin2_ack:thor_adsp_dtb"],
+    out: ["adsp_dtb.mbn"],
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-thor-adsp-dtb",
+    srcs: [":qcom-sm8550-ayn-thor-adsp-dtb-genrule"],
+    dsts: ["qcom/sm8550/ayntec/thor/adsp_dtb.mbn"],
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+phony {
+    name: "qcom-sm8550-ayn",
+    required: [
+        "qcom-sm8550-ayn-cdsp",
+        "qcom-sm8550-ayn-cdsp-dtb",
+        "qcom-sm8550-ayn-odin2-adsp",
+        "qcom-sm8550-ayn-odin2-adsp-dtb",
+        "qcom-sm8550-ayn-odin2mini-adsp",
+        "qcom-sm8550-ayn-odin2mini-adsp-dtb",
+        "qcom-sm8550-ayn-odin2portal-adsp",
+        "qcom-sm8550-ayn-odin2portal-adsp-dtb",
+        "qcom-sm8550-ayn-thor-adsp",
+        "qcom-sm8550-ayn-thor-adsp-dtb",
+        "qcom-sm8550-ayn-cdsp.vendor_ramdisk",
+        "qcom-sm8550-ayn-cdsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2-adsp.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2-adsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2mini-adsp.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2mini-adsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2portal-adsp.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2portal-adsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-ayn-thor-adsp.vendor_ramdisk",
+        "qcom-sm8550-ayn-thor-adsp-dtb.vendor_ramdisk",
+    ],
+}
