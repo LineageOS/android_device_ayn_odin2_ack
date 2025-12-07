@@ -66,6 +66,9 @@ endif
 # Assert
 TARGET_OTA_ASSERT_DEVICE := odin2
 
+# DTB
+TARGET_DTB_LIST_WILDCARD := qcs8550-ayntec-common
+
 # Kernel
 include device/ayn/odin2_ack/modules.mk
 
