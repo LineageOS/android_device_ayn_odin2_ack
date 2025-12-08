@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+TARGET_MODELS ?= odin2 odin2mini odin2portal thor rp6
+
 AB_OTA_UPDATER := true
 
 # Soong namespaces
@@ -24,6 +26,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+# Init related
+PRODUCT_COPY_FILES += \
+    $(foreach model,$(TARGET_MODELS),device/ayn/odin2_ack/init/fstab.odin2:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(model)) \
+    $(foreach model,$(TARGET_MODELS),device/ayn/odin2_ack/init/fstab.odin2:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(model)) \
+    $(foreach model,$(TARGET_MODELS),device/ayn/odin2_ack/init/init.$(model).rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(model).rc) \
+    $(foreach model,$(TARGET_MODELS),device/ayn/odin2_ack/init/init.recovery.$(model).rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.$(model).rc) \
+    device/ayn/odin2_ack/init/init.odin2_common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.odin2_common.rc \
+    device/ayn/odin2_ack/init/init.recovery.odin2_common.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.odin2_common.rc
 
 # Audio
 PRODUCT_PACKAGES += \
