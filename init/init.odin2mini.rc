@@ -1,0 +1,4 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+import /vendor/etc/init/hw/init.odin2_common.rc
