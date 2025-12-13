@@ -368,3 +368,51 @@ modem/image/adspr.jsn:vendor/firmware/qcom/sm8550/retroidpocket/rp6/adspr.jsn
 modem/image/adsps.jsn:vendor/firmware/qcom/sm8550/retroidpocket/rp6/adsps.jsn
 modem/image/adspua.jsn:vendor/firmware/qcom/sm8550/retroidpocket/rp6/adspua.jsn
 modem/image/battmgr.jsn:vendor/firmware/qcom/sm8550/retroidpocket/rp6/battmgr.jsn
+
+# Common Bootloader
+./aop.mbn:product/etc/firmware/aop.img
+./aop_devcfg.mbn:product/etc/firmware/aop_config.img
+./cpucp.elf:product/etc/firmware/cpucp.img
+./devcfg.mbn:product/etc/firmware/devcfg.img
+./dspso.bin:product/etc/firmware/dsp.img
+./hypvm.mbn:product/etc/firmware/hyp.img
+./imagefv.elf:product/etc/firmware/imagefv.img
+./keymint.mbn:product/etc/firmware/keymaster.img
+./multi_image_qti.mbn:product/etc/firmware/multiimgqti.img
+./qupv3fw.elf:product/etc/firmware/qupfw.img
+./shrm.elf:product/etc/firmware/shrm.img
+./tz.mbn:product/etc/firmware/tz.img
+./uefi_sec.mbn:product/etc/firmware/uefisecapp.img
+./XblRamdump.elf:product/etc/firmware/xbl_ramdump.img
+
+# Odin2Mini Bootloader
+./abl.elf:product/etc/firmware/odin2mini_abl.img|9a6144c75f2aa4c00f5a7a2a331d456b6a8c4bd7
+./BTFM.bin:product/etc/firmware/odin2mini_bluetooth.img|ba8be6d44381bdd54a1ab8c71140444a2e9811dc
+./multi_image.mbn:product/etc/firmware/odin2mini_multiimgoem.img|6bb5541c65aeb3668d3b159a7bf4f2e4d75995a4
+./uefi.elf:product/etc/firmware/odin2mini_uefi.img|671bb6d1c20fd3329a9ba0c7ef4764189b57726e
+./xbl_s.melf:product/etc/firmware/odin2mini_xbl.img|52e89f87c5114d94df97a5ada991e372dda09cdb
+./xbl_config.elf:product/etc/firmware/odin2mini_xbl_config.img|99e05bac3b7f17bffa39515dfe92556b4e532566
+
+# Odin2Portal Bootloader
+./abl.elf:product/etc/firmware/odin2portal_abl.img|0ca3d7cd463a96e46df8207b60b514539d0886ef
+./BTFM.bin:product/etc/firmware/odin2portal_bluetooth.img|1f16616a23c3924913022bed0cb6e64fae8aa11f
+./multi_image.mbn:product/etc/firmware/odin2portal_multiimgoem.img|d43ff41d1afb1742ddc916b95fc5d93dfcaab1d2
+./uefi.elf:product/etc/firmware/odin2portal_uefi.img|e928c44e0465b5e9c8f3a927da1fc9d39d5a549d
+./xbl_s.melf:product/etc/firmware/odin2portal_xbl.img|0b22fdd44da9d2c642d9108525365f1ee2d51e1f
+./xbl_config.elf:product/etc/firmware/odin2portal_xbl_config.img|06eac57db10162b01c85821df88534b6b80c0a26
+
+# Thor Bootloader
+./abl.elf:product/etc/firmware/thor_abl.img
+./BTFM.bin:product/etc/firmware/thor_bluetooth.img
+./multi_image.mbn:product/etc/firmware/thor_multiimgoem.img
+./uefi.elf:product/etc/firmware/thor_uefi.img
+./xbl_s.melf:product/etc/firmware/thor_xbl.img
+./xbl_config.elf:product/etc/firmware/thor_xbl_config.img
+
+# RP6 Bootloader
+./abl.elf:product/etc/firmware/rp6_abl.img|65a7cd8089570ddcc81e5046d108994537315513
+./BTFM.bin:product/etc/firmware/rp6_bluetooth.img|ad0c99aa9772dcac7360aa97b670f751a227f330
+./multi_image.mbn:product/etc/firmware/rp6_multiimgoem.img|1561cc40f24fb8f2a68a06abe9a4e062678cf00c
+./uefi.elf:product/etc/firmware/rp6_uefi.img|c5fa17f7aba4c8da96c27fd9fd932995e45983cf
+./xbl_s.melf:product/etc/firmware/rp6_xbl.img|1e5e48b653883cf1f41422a65b3c8a7f2cdec3b9
+./xbl_config.elf:product/etc/firmware/rp6_xbl_config.img|ed2a3d6f6f11e98c50950e066407681aeb17b0d8
