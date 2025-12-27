@@ -1,0 +1,10 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_usr_keylayout {
+    name: "keylayout_data_odin2",
+    srcs: ["*.kl"],
+    soc_specific: true,
+}
