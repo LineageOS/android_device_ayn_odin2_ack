@@ -46,6 +46,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     qcom-sm8550-ayn
 
+# Key layouts
+PRODUCT_PACKAGES += \
+    idc_data_odin2 \
+    keylayout_data_odin2
+
 # Updater
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 AB_OTA_PARTITIONS += \
