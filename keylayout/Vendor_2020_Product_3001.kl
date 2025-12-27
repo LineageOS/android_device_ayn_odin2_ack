@@ -1,0 +1,41 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# AYN Odin2 Gamepad
+
+key 0x220   DPAD_UP
+key 0x223   DPAD_RIGHT
+key 0x221   DPAD_DOWN
+key 0x222   DPAD_LEFT
+
+key 0x130   BUTTON_A
+key 0x131   BUTTON_B
+key 0x133   BUTTON_X
+key 0x134   BUTTON_Y
+
+key 0x136   BUTTON_L1
+key 0x137   BUTTON_R1
+
+key 158     BACK
+key 0x13a   BUTTON_SELECT
+key 0x13b   BUTTON_START
+key 0x13c   BUTTON_MODE
+
+key 0x13d   BUTTON_THUMBL
+key 0x13e   BUTTON_THUMBR
+
+# left Analog Stick
+axis 0x00   X
+axis 0x01   Y
+
+# Right Analog Stick
+axis 0x03   Z
+axis 0x04   RZ
+
+# L2 trigger
+axis 0x14   LTRIGGER
+
+# R2 trigger
+axis 0x15   RTRIGGER
