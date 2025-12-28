@@ -13,6 +13,11 @@
 // limitations under the License.
 //
 
+sh_binary_host {
+    name: "ath12k-bdencoder",
+    src: "ath12k-bdencoder",
+}
+
 pil_squasher {
     name: "qcom-sm8550-ayn-cdsp",
     stem: "cdsp.mbn",
