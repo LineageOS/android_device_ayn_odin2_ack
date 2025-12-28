@@ -25,6 +25,11 @@ prebuilt_firmware {
     required: [],
 }
 
+sh_binary_host {
+    name: "ath12k-bdencoder",
+    src: "ath12k-bdencoder",
+}
+
 // This assumes that the last file in the filegroup is the .mdt
 // Which should remain true for the alphabetically sorted groups created by the Lineage extract
 genrule_defaults {
