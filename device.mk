@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
     qcom-sm8550-odin2-tplg
 
 # Firmware
+$(call soong_config_set_bool,linux_firmware_mainline,use_product_specific_ath_board2,true)
 PRODUCT_PACKAGES += \
     qcom-sm8550-ayn
 
