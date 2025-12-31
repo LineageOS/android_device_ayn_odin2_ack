@@ -17,6 +17,26 @@ sh_binary_host {
     name: "ath12k-bdencoder",
     src: "ath12k-bdencoder",
 }
+filegroup {
+    name: "board-2.json",
+    srcs: ["board-2.json"],
+}
+genrule {
+    name: "qcom-sm8550-ayn-board2-genrule",
+    srcs: [
+        "//external/linux-firmware-mainline:linux_firmware_ath12k-wcn7850-board2-group",
+        ":board-2.json",
+    ],
+    out: ["board-2.bin"],
+    tools: ["ath12k-bdencoder"],
+    cmd: "$(location ath12k-bdencoder) -e $$(awk '{print $$1}' <<< \"$(in)\") && $(location ath12k-bdencoder) -c $$(awk '{print $$2}' <<< \"$(in)\") -o $(out)",
+}
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-board2",
+    srcs: [":qcom-sm8550-ayn-board2-genrule"],
+    dsts: ["ath12k/WCN7850/hw2.0/board-2.bin"],
+    vendor: true,
+}
 
 // This assumes that the last file in the filegroup is the .mdt
 // Which should remain true for the alphabetically sorted groups created by the Lineage extract
@@ -169,6 +189,7 @@ prebuilt_firmware {
 phony {
     name: "qcom-sm8550-ayn",
     required: [
+        "qcom-sm8550-ayn-board2",
         "qcom-sm8550-ayn-cdsp",
         "qcom-sm8550-ayn-cdsp-dtb",
         "qcom-sm8550-ayn-odin2-adsp",

@@ -1,0 +1,64 @@
+[
+    {
+        "board": [
+            {
+                "names": [
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=1107,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=3378,qmi-chip-id=2,qmi-board-id=260"
+                ],
+                "data": "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=3378,qmi-chip-id=2,qmi-board-id=260.bin"
+            },
+            {
+                "names": [
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=3378,qmi-chip-id=2,qmi-board-id=262"
+                ],
+                "data": "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=3378,qmi-chip-id=2,qmi-board-id=262.bin"
+            },
+            {
+                "names": [
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=3378,qmi-chip-id=2,qmi-board-id=270"
+                ],
+                "data": "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=3378,qmi-chip-id=2,qmi-board-id=270.bin"
+            },
+            {
+                "names": [
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=3378,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e0dc,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17aa,subsystem-device=e0e6,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e0ea,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e0ed,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e0f7,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e0fb,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e109,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e10a,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e10d,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=1eac,subsystem-device=8000,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=1eac,subsystem-device=8002,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=1eac,subsystem-device=8003,qmi-chip-id=2,qmi-board-id=255",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=3378,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e0dc,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17aa,subsystem-device=e0e6,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e0ea,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e0ed,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e0f7,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e0fb,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e109,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e10a,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=105b,subsystem-device=e10d,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=1eac,subsystem-device=8000,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=1eac,subsystem-device=8002,qmi-chip-id=2",
+                    "bus=pci,vendor=17cb,device=1107,subsystem-vendor=1eac,subsystem-device=8003,qmi-chip-id=2"
+                ],
+                "data": "bus=pci,vendor=17cb,device=1107,subsystem-vendor=17cb,subsystem-device=3378,qmi-chip-id=2,qmi-board-id=255.bin"
+            }
+        ],
+        "regdb": [
+            {
+                "names": [
+                    "bus=pci"
+                ],
+                "data": "bus=pci.regdb"
+            }
+        ]
+    }
+]
