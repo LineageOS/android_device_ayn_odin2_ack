@@ -42,6 +42,13 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     qcom-sm8550-odin2-topology
 
+ifeq ($(TARGET_AUDIO_HAL),baylibre)
+PRODUCT_COPY_FILES += \
+    device/ayn/odin2_ack/audio/mixer_controls.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_controls.xml
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.audio.primary.card_name=AYNOdin2
+endif
+
 # Firmware
 $(call soong_config_set_bool,linux_firmware_mainline,use_product_specific_ath_board2,true)
 PRODUCT_PACKAGES += \
