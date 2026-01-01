@@ -1,0 +1,4 @@
+ro.product.vendor.device=thor
+ro.product.vendor.model=odin2
+ro.product.vendor.name=Thor
+vendor.usb.product_string=Thor

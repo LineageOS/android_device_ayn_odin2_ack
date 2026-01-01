@@ -12,6 +12,9 @@ PRODUCT_SOONG_NAMESPACES += device/ayn/odin2_ack
 
 include device/ayn/qcs8550-ack/qcs8550.mk
 
+# Properties
+TARGET_VENDOR_PROP += device/ayn/odin2_ack/properties/vendor.prop
+
 PRODUCT_CHARACTERISTICS   := tv
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi mdpi hdpi tvdpi
 PRODUCT_AAPT_PREF_CONFIG  := xhdpi
@@ -54,6 +57,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     idc_data_odin2 \
     keylayout_data_odin2
+
+# Unified device support
+$(call soong_config_set,libinit,vendor_init_lib,//device/ayn/odin2_ack:libinit_odin2)
+PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
+    ro.product.vendor.device \
+    ro.product.vendor.model \
+    ro.product.vendor.name
+PRODUCT_COPY_FILES += \
+    $(foreach model,$(TARGET_MODELS),device/ayn/odin2_ack/properties/$(model).prop:$(TARGET_COPY_OUT_VENDOR)/etc/props/$(model).prop) \
 
 # Updater
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
