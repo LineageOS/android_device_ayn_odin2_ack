@@ -2,3 +2,6 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import /vendor/etc/init/hw/init.qcs8550.rc
+
+on early-boot
+    wait /dev/snd/controlC0 10
