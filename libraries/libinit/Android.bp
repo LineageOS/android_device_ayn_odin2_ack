@@ -1,0 +1,10 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "init_odin2",
+    srcs: ["init_odin2.cpp"],
+    defaults: ["init_mainline_common_defaults"],
+}
