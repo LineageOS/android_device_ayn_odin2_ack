@@ -6,6 +6,9 @@ import /vendor/etc/init/hw/init.qcs8550.rc
 on early-boot
     wait /dev/snd/controlC0 10
 
+on post-fs-data
+    write /sys/power/wake_lock odin2-staywake
+
 on early-init
     start vendor.drm-framebuffer
 
