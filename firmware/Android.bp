@@ -189,6 +189,7 @@ prebuilt_firmware {
 phony {
     name: "qcom-sm8550-ayn",
     required: [
+        "linux_firmware_qcom-a740.vendor_ramdisk",
         "qcom-sm8550-ayn-board2",
         "qcom-sm8550-ayn-cdsp",
         "qcom-sm8550-ayn-cdsp-dtb",
