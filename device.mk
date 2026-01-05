@@ -48,6 +48,10 @@ PRODUCT_COPY_FILES += \
     device/ayn/odin2_ack/audio/mixer_controls.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_controls.xml
 endif
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    bdaddr
+
 # Firmware
 $(call soong_config_set_bool,linux_firmware_mainline,use_product_specific_ath_board2,true)
 PRODUCT_PACKAGES += \
