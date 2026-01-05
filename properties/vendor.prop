@@ -1,1 +1,2 @@
 import /vendor/etc/props/${ro.hardware}.prop
+ro.vendor.bt.bdaddr_path=/mnt/vendor/persist/quec_bt_mac
