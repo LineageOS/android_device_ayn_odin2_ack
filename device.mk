@@ -50,6 +50,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.primary.card_name=AYNOdin2
 endif
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    bdaddr
+
 # Firmware
 $(call soong_config_set_bool,linux_firmware_mainline,use_product_specific_ath_board2,true)
 PRODUCT_PACKAGES += \
