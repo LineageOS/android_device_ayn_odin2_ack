@@ -2,3 +2,5 @@ ro.product.vendor.device=thor
 ro.product.vendor.model=odin2
 ro.product.vendor.name=Thor
 vendor.usb.product_string=Thor
+vendor.hwc.drm.DSI-1.edid_path=qcom/sm8550/ayntec/thor/1080x1240.edid
+vendor.hwc.drm.DSI-2.edid_path=qcom/sm8550/ayntec/thor/1080x1920.edid
