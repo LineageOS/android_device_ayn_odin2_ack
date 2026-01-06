@@ -186,6 +186,41 @@ prebuilt_firmware {
     vendor_ramdisk_available: true,
 }
 
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2mini-edids",
+    srcs: [
+        "qcom/sm8550/ayntec/odin2mini/1080x1920.edid",
+    ],
+    dsts: [
+        "qcom/sm8550/ayntec/odin2mini/1080x1920.edid",
+    ],
+    vendor: true,
+}
+
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2portal-edids",
+    srcs: [
+        "qcom/sm8550/ayntec/odin2portal/1080x1920.edid",
+    ],
+    dsts: [
+        "qcom/sm8550/ayntec/odin2portal/1080x1920.edid",
+    ],
+    vendor: true,
+}
+
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-thor-edids",
+    srcs: [
+        "qcom/sm8550/ayntec/thor/1080x1240.edid",
+        "qcom/sm8550/ayntec/thor/1080x1920.edid",
+    ],
+    dsts: [
+        "qcom/sm8550/ayntec/thor/1080x1240.edid",
+        "qcom/sm8550/ayntec/thor/1080x1920.edid",
+    ],
+    vendor: true,
+}
+
 phony {
     name: "qcom-sm8550-ayn",
     required: [
@@ -211,5 +246,8 @@ phony {
         "qcom-sm8550-ayn-odin2portal-adsp-dtb.vendor_ramdisk",
         "qcom-sm8550-ayn-thor-adsp.vendor_ramdisk",
         "qcom-sm8550-ayn-thor-adsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2mini-edids",
+        "qcom-sm8550-ayn-odin2portal-edids",
+        "qcom-sm8550-ayn-thor-edids",
     ],
 }
