@@ -2,3 +2,4 @@ ro.product.vendor.device=odin2
 ro.product.vendor.model=odin2
 ro.product.vendor.name=Odin 2
 vendor.usb.product_string=Odin 2
+vendor.hwc.drm.DSI-1.edid_path=qcom/sm8550/ayntec/odin2/1080x1920.edid

@@ -2,3 +2,4 @@ ro.product.vendor.device=nova
 ro.product.vendor.model=odin2
 ro.product.vendor.name=Nova
 vendor.usb.product_string=Nova
+vendor.hwc.drm.DSI-1.edid_path=qcom/sm8550/retroidpocket/nova/1280x960.edid

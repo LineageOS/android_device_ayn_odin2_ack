@@ -143,6 +143,74 @@ pil_squasher {
     relative_install_path: "qcom/sm8550/retroidpocket/rp6",
 }
 
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2-edids",
+    srcs: [
+        "qcom/sm8550/ayntec/odin2/1080x1920.edid",
+    ],
+    dsts: [
+        "qcom/sm8550/ayntec/odin2/1080x1920.edid",
+    ],
+    vendor: true,
+}
+
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2mini-edids",
+    srcs: [
+        "qcom/sm8550/ayntec/odin2mini/1080x1920.edid",
+    ],
+    dsts: [
+        "qcom/sm8550/ayntec/odin2mini/1080x1920.edid",
+    ],
+    vendor: true,
+}
+
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-odin2portal-edids",
+    srcs: [
+        "qcom/sm8550/ayntec/odin2portal/1080x1920.edid",
+    ],
+    dsts: [
+        "qcom/sm8550/ayntec/odin2portal/1080x1920.edid",
+    ],
+    vendor: true,
+}
+
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-thor-edids",
+    srcs: [
+        "qcom/sm8550/ayntec/thor/1080x1240.edid",
+        "qcom/sm8550/ayntec/thor/1080x1920.edid",
+    ],
+    dsts: [
+        "qcom/sm8550/ayntec/thor/1080x1240.edid",
+        "qcom/sm8550/ayntec/thor/1080x1920.edid",
+    ],
+    vendor: true,
+}
+
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-nova-edids",
+    srcs: [
+        "qcom/sm8550/retroidpocket/nova/1280x960.edid",
+    ],
+    dsts: [
+        "qcom/sm8550/retroidpocket/nova/1280x960.edid",
+    ],
+    vendor: true,
+}
+
+prebuilt_firmware {
+    name: "qcom-sm8550-ayn-rp6-edids",
+    srcs: [
+        "qcom/sm8550/retroidpocket/rp6/1080x1920.edid",
+    ],
+    dsts: [
+        "qcom/sm8550/retroidpocket/rp6/1080x1920.edid",
+    ],
+    vendor: true,
+}
+
 phony {
     name: "qcom-sm8550-ayn",
     required: [
@@ -176,5 +244,10 @@ phony {
         "qcom-sm8550-retroidpocket-nova-adsp-dtb.vendor_ramdisk",
         "qcom-sm8550-retroidpocket-rp6-adsp.vendor_ramdisk",
         "qcom-sm8550-retroidpocket-rp6-adsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-ayn-odin2-edids",
+        "qcom-sm8550-ayn-odin2mini-edids",
+        "qcom-sm8550-ayn-odin2portal-edids",
+        "qcom-sm8550-ayn-thor-edids",
+        "qcom-sm8550-ayn-rp6-edids",
     ],
 }
