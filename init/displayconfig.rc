@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+on early-init
+    mkdir /metadata/vendor 0755 system system
+    mkdir /metadata/vendor/displayconfig 0755 system system
+
+on early-init && property:ro.hardware=thor
+    symlink /vendor/etc/displayconfig/device_state_configuration_thor.xml /metadata/vendor/displayconfig/device_state_configuration.xml
+    symlink /vendor/etc/displayconfig/display_layout_configuration_thor.xml /metadata/vendor/displayconfig/display_layout_configuration.xml
