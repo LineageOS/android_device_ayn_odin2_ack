@@ -71,6 +71,17 @@ PRODUCT_PACKAGES += \
     idc_data_odin2 \
     keylayout_data_odin2
 
+# SKU Specific Configs
+# Fold related configs
+PRODUCT_COPY_FILES += \
+    device/ayn/odin2_ack/display/display_settings.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_settings.xml \
+    device/ayn/odin2_ack/display/display_id_4630946441858561536.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946441858561536.xml \
+    device/ayn/odin2_ack/display/display_id_4630946482288157957.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946482288157957.xml
+PRODUCT_PACKAGES += \
+    ThorOverlay \
+    ThorSettingsOverlay \
+    ThorOverlayATV
+
 # Unified device support
 $(call soong_config_set,libinit,vendor_init_lib,//device/ayn/odin2_ack:init_odin2)
 PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
