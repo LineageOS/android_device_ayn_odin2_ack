@@ -1,0 +1,18 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+install_symlink {
+    name: "device_state_symlink",
+    vendor: true,
+    installed_location: "etc/displayconfig/device_state_configuration.xml",
+    symlink_target: "/data/vendor/displayconfig/device_state_configuration.xml",
+}
+
+install_symlink {
+    name: "display_layout_symlink",
+    vendor: true,
+    installed_location: "etc/displayconfig/display_layout_configuration.xml",
+    symlink_target: "/data/vendor/displayconfig/display_layout_configuration.xml",
+}

@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+on post-fs-data
+    mkdir /data/vendor/displayconfig 0755 system system
+
+on post-fs-data && property:ro.hardware=thor
+    symlink /vendor/etc/displayconfig/device_state_configuration_thor.xml /data/vendor/displayconfig/device_state_configuration.xml
+    symlink /vendor/etc/displayconfig/display_layout_configuration_thor.xml /data/vendor/displayconfig/display_layout_configuration.xml

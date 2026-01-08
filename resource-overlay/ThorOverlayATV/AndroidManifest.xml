@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.lineage.overlay.thor.atv">
+    <application android:hasCode="false" />
+    <overlay android:targetPackage="android"
+             android:requiredSystemPropertyName="ro.hardware"
+             android:requiredSystemPropertyValue="thor"
+             android:isStatic="true"
+             android:priority="1" />
+</manifest>
