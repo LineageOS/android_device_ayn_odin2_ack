@@ -81,4 +81,8 @@ BOARD_USES_METADATA_PARTITION := true
 # Recovery
 TARGET_RECOVERY_FSTAB := device/ayn/odin2_ack/init/fstab.odin2
 
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    device/ayn/odin2_ack/sepolicy/vendor
+
 include device/ayn/qcs8550-ack/BoardConfigCommon.mk
