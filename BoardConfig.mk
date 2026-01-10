@@ -70,6 +70,11 @@ endif
 # Assert
 TARGET_OTA_ASSERT_DEVICE := odin2
 
+# Bluetooth
+ifeq ($(PRODUCT_IS_ATV),true)
+TARGET_VENDOR_PROP += device/ayn/odin2_ack/properties/bluetooth.prop
+endif
+
 # DTB
 TARGET_DTB_LIST_WILDCARD := qcs8550-ayntec-common
 
