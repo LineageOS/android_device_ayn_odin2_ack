@@ -94,6 +94,25 @@ static void set_properties(odin2_device *chosen_device)
     property_set("ro.product.vendor_dlkm.model",  chosen_device->model);
 }
 
+#define ADT3_FP "ADT-3/adt3/adt3:13/TTT1.230205.001/9565391:user/release-keys"
+#define ADT3_DESC "adt3-user 13 TTT1.230205.001 9565391 release-keys"
+static void set_atv_fingerprint(odin2_device *chosen_device)
+{
+    property_set("ro.bootimage.build.fingerprint",   ADT3_FP);
+    property_set("ro.build.fingerprint",             ADT3_FP);
+    property_set("ro.odm.build.fingerprint",         ADT3_FP);
+    property_set("ro.product.build.fingerprint",     ADT3_FP);
+    property_set("ro.system.build.fingerprint",      ADT3_FP);
+    property_set("ro.system_dlkm.build.fingerprint", ADT3_FP);
+    property_set("ro.system_ext.build.fingerprint",  ADT3_FP);
+    property_set("ro.vendor.build.fingerprint",      ADT3_FP);
+    property_set("ro.vendor_dlkm.build.fingerprint", ADT3_FP);
+
+    property_set("ro.build.description", ADT3_DESC);
+
+    property_set("ro.com.google.clientidbase", "android-droid-tv");
+}
+
 void vendor_load_properties()
 {
     odin2_device *chosen_device;
@@ -122,4 +141,7 @@ void vendor_load_properties()
     }
 
     set_properties(chosen_device);
+
+    if (property_get("ro.build.characteristics") == "tv")
+        set_atv_fingerprint(chosen_device);
 }
