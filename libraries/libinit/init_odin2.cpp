@@ -40,6 +40,21 @@ static void set_properties(odin2_device *chosen_device)
     }
 }
 
+#define ADT3_FP "ADT-3/adt3/adt3:13/TTT1.230205.001/9565391:user/release-keys"
+#define ADT3_DESC "adt3-user 13 TTT1.230205.001 9565391 release-keys"
+static void set_atv_fingerprint()
+{
+    property_override("ro.build.fingerprint", ADT3_FP);
+
+    for (std::string partition :
+         { "bootimage", "odm", "product", "system", "system_ext", "system_dlkm", "vendor", "vendor_dlkm" })
+        property_override("ro." + partition + ".build.fingerprint", ADT3_FP);
+
+    property_override("ro.build.description", ADT3_DESC);
+
+    property_override("ro.com.google.clientidbase", "android-droid-tv");
+}
+
 void vendor_load_properties()
 {
     std::string hardware = GetProperty("ro.hardware", "");
@@ -55,4 +70,7 @@ void vendor_load_properties()
     }
 
     set_properties(&it->second);
+
+    if (GetProperty("ro.build.characteristics", "") == "tv")
+        set_atv_fingerprint();
 }
