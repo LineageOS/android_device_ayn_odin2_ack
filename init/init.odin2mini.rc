@@ -2,3 +2,8 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import /vendor/etc/init/hw/init.odin2_common.rc
+
+# Backlight
+on early-boot
+    chown system system /sys/class/backlight/odin2miniled-backlight/brightness
+    chown system system /sys/class/backlight/odin2miniled-backlight/max_brightness
