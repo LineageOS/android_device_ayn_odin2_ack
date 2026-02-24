@@ -1,1 +1,4 @@
 /sys/devices/platform/soc@0/8c0000.geniqup/89c000.serial/89c000.serial:0/89c000.serial:0.0/serial1/serial1-0/swap_face_buttons	u:object_r:vendor_sysfs_gamepad:s0
+
+/sys/devices/platform/backlight/backlight/backlight(/.*)?								u:object_r:sysfs_gpu:s0
+/sys/devices/platform/soc@0/ac0000.geniqup/a80000.i2c/i2c-[0-9]/[0-9]-0046/backlight/odin2miniled-backlight(/.*)?	u:object_r:sysfs_gpu:s0
