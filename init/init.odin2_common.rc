@@ -5,3 +5,16 @@ import /vendor/etc/init/hw/init.qcs8550.rc
 
 on early-boot
     wait /dev/snd/controlC0 10
+
+on early-init
+    start vendor.drm-framebuffer
+
+on property:init.svc.bootanim=running
+    stop vendor.drm-framebuffer
+
+service vendor.drm-framebuffer /vendor/bin/drm-framebuffer -d /dev/dri/card0 -c ${vendor.hwc.drm.primary_display:-DSI-1} -f /vendor/etc/splash.${ro.minui.default_rotation:-ROTATION_RIGHT}.raw
+    class core
+    user root
+    group system
+    oneshot
+    disabled
