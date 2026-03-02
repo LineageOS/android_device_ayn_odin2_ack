@@ -57,6 +57,14 @@ $(call soong_config_set_bool,linux_firmware_mainline,use_product_specific_ath_bo
 PRODUCT_PACKAGES += \
     qcom-sm8550-ayn
 
+# Logo
+PRODUCT_PACKAGES += \
+    drm-framebuffer \
+    drm-framebuffer.recovery
+PRODUCT_COPY_FILES += \
+    device/ayn/odin2_ack/splash/splash.ROTATION_RIGHT.raw:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/system/etc/splash.ROTATION_RIGHT.raw \
+    device/ayn/odin2_ack/splash/splash.ROTATION_RIGHT.raw:$(TARGET_COPY_OUT_VENDOR)/etc/splash.ROTATION_RIGHT.raw
+
 # Key layouts
 PRODUCT_PACKAGES += \
     idc_data_odin2 \
