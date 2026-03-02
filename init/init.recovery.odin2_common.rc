@@ -1,2 +1,16 @@
 # SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
+
+on early-init
+    restorecon /system/bin/drm-framebuffer
+    start drm-framebuffer
+
+on property:init.svc.recovery=running
+    stop drm-framebuffer
+
+service drm-framebuffer /system/bin/drm-framebuffer -d /dev/dri/card0 -c ${vendor.hwc.drm.primary_display:-DSI-1} -f /system/etc/splash.${ro.minui.default_rotation:-ROTATION_NONE}.raw
+    class core
+    user root
+    group system
+    oneshot
+    disabled
