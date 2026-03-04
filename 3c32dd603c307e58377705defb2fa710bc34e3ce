@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6b2f5b8_44f0c50d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-03-04T08:38:00Z",
+      "side": 1,
+      "message": "Currently cuts gpu performance by roughly half. Guessing that the gpu clock is getting stuck.",
+      "revId": "3c32dd603c307e58377705defb2fa710bc34e3ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
