@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1722815c_132a33d7",
+        "filename": "firmware/qcom/sm8550/AYN-Odin2-tplg.bin",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2026-03-04T16:42:49Z",
+      "side": 1,
+      "message": "where does this file from? does it need attaching a LICENSE file?",
+      "revId": "f006f6c50d19df6a573dc35ae2d0f883d32fa1e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
