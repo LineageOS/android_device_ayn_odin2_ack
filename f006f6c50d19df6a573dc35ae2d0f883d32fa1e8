@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ca7a5259_3b63d2ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-03-04T17:46:08Z",
+      "side": 1,
+      "message": "Needs source documentation at least.",
+      "revId": "f006f6c50d19df6a573dc35ae2d0f883d32fa1e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1722815c_132a33d7",
         "filename": "firmware/qcom/sm8550/AYN-Odin2-tplg.bin",
         "patchSetId": 1
@@ -14,6 +31,24 @@
       "writtenOn": "2026-03-04T16:42:49Z",
       "side": 1,
       "message": "where does this file from? does it need attaching a LICENSE file?",
+      "revId": "f006f6c50d19df6a573dc35ae2d0f883d32fa1e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a81d4f51_8114c9c0",
+        "filename": "firmware/qcom/sm8550/AYN-Odin2-tplg.bin",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-03-04T17:46:08Z",
+      "side": 1,
+      "message": "https://github.com/AYNTechnologies/audioreach-topology\nOh, right. This does need a bit more. It\u0027d be nice to build inline, but I\u0027m not sure that\u0027s feasible.",
+      "parentUuid": "1722815c_132a33d7",
       "revId": "f006f6c50d19df6a573dc35ae2d0f883d32fa1e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
