@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6982245d_ba63ea28",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2026-03-04T16:38:01Z",
+      "side": 1,
+      "message": "init.recovery.mainline.usb.rc is now in /system/etc/init, which init would scan and automatically load",
+      "revId": "9242ff9f8315d131da66fdd105ce60f55f21b978",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
