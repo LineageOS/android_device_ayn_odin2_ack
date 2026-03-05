@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0229254c_6c586128",
+        "filename": "libraries/libinit/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2026-03-05T08:07:35Z",
+      "side": 1,
+      "message": "```suggestion\ncc_library_static {\n    name: \"init_odin2\",\n    srcs: [\"init_odin2.cpp\"],\n    defaults: [\"init_mainline_common_defaults\"],\n}\n```",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 1
+      },
+      "revId": "8d73418dde71a251effbf4d74e5a0c093704feb1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1eba29ab_9433d943",
+        "filename": "libraries/libinit/init_odin2.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2026-03-05T08:07:35Z",
+      "side": 1,
+      "message": "```suggestion\n\n/*\n * SPDX-FileCopyrightText: The LineageOS Project\n * SPDX-License-Identifier: Apache-2.0\n */\n \n#define LOG_TAG \"odin2_init\"\n\n#include \u003candroid-base/logging.h\u003e\n#include \u003candroid-base/properties.h\u003e\n#include \u003clibinit_mainline_common.h\u003e\n#include \u003clibinit_utils.h\u003e\n\n#include \"vendor_init.h\"\n\n#include \u003cstring\u003e\n#include \u003cunordered_map\u003e\n\nusing android::base::GetProperty;\n\nstruct odin2_device {\n    std::string device;\n    std::string name;\n    std::string model;\n\n} typedef odin2_device;\n\nstatic std::unordered_map\u003cstd::string, odin2_device\u003e kOdin2Devices \u003d {\n        {\"odin2\", {\"odin2\", \"odin2\", \"Odin 2\"}},\n        {\"odin2mini\", {\"odin2\", \"odin2mini\", \"Odin 2 Mini\"}},\n        {\"odin2portal\", {\"odin2\", \"odin2portal\", \"Odin 2 Portal\"}},\n        {\"thor\", {\"odin2\", \"thor\", \"Thor\"}},\n};\n\nstatic void set_odin2_device_properties(void) {\n    auto hardware \u003d GetProperty(\"ro.hardware\", \"\");\n    if (hardware.empty()) return;\n\n    auto it \u003d kOdin2Devices.find(hardware);\n    if (it \u003d\u003d kOdin2Devices.end()) {\n        LOG(ERROR) \u003c\u003c \"could not detect model, aborting\";\n        return;\n    }\n\n    auto chosen_device \u003d it-\u003esecond;\n    property_override(\"ro.build.product\", chosen_device.device);\n    property_override(\"ro.product.device\", chosen_device.device);\n    property_override(\"ro.product.model\", chosen_device.model);\n    property_override(\"ro.product.name\", chosen_device.name);\n    set_ro_build_prop(\"device\", chosen_device.device, true);\n    set_ro_build_prop(\"model\", chosen_device.model, true);\n    set_ro_build_prop(\"name\", chosen_device.name, true);\n}\n\nvoid vendor_load_properties() {\n    vendor_load_properties_mainline_common();\n    set_odin2_device_properties();\n}\n```",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 125,
+        "endChar": 1
+      },
+      "revId": "8d73418dde71a251effbf4d74e5a0c093704feb1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
