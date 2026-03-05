@@ -45,6 +45,30 @@
       },
       "revId": "8d73418dde71a251effbf4d74e5a0c093704feb1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6314bc33_72c30e26",
+        "filename": "libraries/libinit/init_odin2.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-03-05T18:01:56Z",
+      "side": 1,
+      "message": "The mainline libinit framework does a few things I don\u0027t want here. Like dynamic dalvik heap stuff and setting vendor build props, which I handle via variant .prop files to work on gsi.",
+      "parentUuid": "1eba29ab_9433d943",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 125,
+        "endChar": 1
+      },
+      "revId": "8d73418dde71a251effbf4d74e5a0c093704feb1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
