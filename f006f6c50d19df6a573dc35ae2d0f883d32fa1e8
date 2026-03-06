@@ -51,6 +51,24 @@
       "parentUuid": "1722815c_132a33d7",
       "revId": "f006f6c50d19df6a573dc35ae2d0f883d32fa1e8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8949343_5c2d651f",
+        "filename": "firmware/qcom/sm8550/AYN-Odin2-tplg.bin",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-03-06T03:19:08Z",
+      "side": 1,
+      "message": "Now set up to build inline. Fork for the topology repo pending.",
+      "parentUuid": "a81d4f51_8114c9c0",
+      "revId": "f006f6c50d19df6a573dc35ae2d0f883d32fa1e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
