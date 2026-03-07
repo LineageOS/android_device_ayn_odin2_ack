@@ -24,6 +24,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d5c3211_50569912",
+        "filename": "libraries/libinit/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-03-07T23:45:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0229254c_6c586128",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 1
+      },
+      "revId": "8d73418dde71a251effbf4d74e5a0c093704feb1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1eba29ab_9433d943",
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "simply just remove the `vendor_load_properties_mainline_common()` call then, still a lot better than your original impl...",
       "parentUuid": "6314bc33_72c30e26",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 125,
+        "endChar": 1
+      },
+      "revId": "8d73418dde71a251effbf4d74e5a0c093704feb1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eaa25938_e8cfb78c",
+        "filename": "libraries/libinit/init_odin2.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-03-07T23:45:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bdeecabe_f0a18224",
       "range": {
         "startLine": 1,
         "startChar": 0,
