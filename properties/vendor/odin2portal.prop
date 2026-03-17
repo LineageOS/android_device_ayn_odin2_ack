@@ -1,5 +1,6 @@
 ro.product.vendor.device=odin2portal
 ro.product.vendor.model=odin2
 ro.product.vendor.name=Odin 2 Portal
+ro.surface_flinger.game_default_frame_rate_override=165
 vendor.usb.product_string=Odin 2 Portal
 vendor.hwc.drm.DSI-1.edid_path=qcom/sm8550/ayntec/odin2portal/1080x1920.edid

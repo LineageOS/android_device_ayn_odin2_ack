@@ -72,6 +72,11 @@ PRODUCT_PACKAGES += \
     idc_data_odin2 \
     keylayout_data_odin2
 
+# SKU Specific Configs
+PRODUCT_PACKAGES += \
+    PortalOverlay \
+    PortalSettingsOverlay
+
 # Unified device support
 $(call soong_config_set,libinit,vendor_init_lib,//device/ayn/odin2_ack:init_odin2)
 PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
