@@ -78,6 +78,8 @@ PRODUCT_COPY_FILES += \
     device/ayn/odin2_ack/display/display_id_4630946441858561536.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946441858561536.xml \
     device/ayn/odin2_ack/display/display_id_4630946482288157957.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946482288157957.xml
 PRODUCT_PACKAGES += \
+    PortalOverlay \
+    PortalSettingsOverlay \
     ThorOverlay \
     ThorSettingsOverlay \
     ThorOverlayATV
