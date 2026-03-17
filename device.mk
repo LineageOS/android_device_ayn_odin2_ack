@@ -82,6 +82,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     device_state_symlink \
     display_layout_symlink \
+    PortalOverlay \
+    PortalSettingsOverlay \
     ThorOverlay \
     ThorSettingsOverlay \
     ThorOverlayATV
