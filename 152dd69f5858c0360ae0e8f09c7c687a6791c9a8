@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14070b2d_fc3332b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2026-03-22T05:58:36Z",
+      "side": 1,
+      "message": "wouldn\u0027t using a nvidia atv print be better for qcom device?",
+      "revId": "152dd69f5858c0360ae0e8f09c7c687a6791c9a8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
