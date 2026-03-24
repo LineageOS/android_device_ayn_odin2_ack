@@ -1,0 +1,2 @@
+# Gamepad
+persist.vendor.lineage.swap_face_buttons	u:object_r:vendor_gamepad_prop:s0
