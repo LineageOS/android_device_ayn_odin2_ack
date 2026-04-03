@@ -5,6 +5,8 @@
 
 TARGET_MODELS ?= odin2 odin2mini odin2portal thor rp6
 
+TARGET_HAS_VIBRATOR := false
+
 AB_OTA_UPDATER := true
 
 # Soong namespaces
