@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-ifneq ($(filter odin2_ack odin2_ack_tab, $(TARGET_DEVICE)),)
+ifneq ($(filter odin2_ack odin2_tab_ack, $(TARGET_DEVICE)),)
 MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg$(HOST_EXECUTABLE_SUFFIX)
 BUILT_TARGET_FILES_ZIPROOT := $(call intermediates-dir-for,PACKAGING,target_files)/$(TARGET_PRODUCT)-target_files
 
