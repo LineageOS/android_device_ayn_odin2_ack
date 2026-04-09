@@ -56,6 +56,9 @@ endif
 PRODUCT_PACKAGES += \
     bdaddr
 
+# GMS
+PRODUCT_GMS_CLIENTID_BASE ?= android-uct
+
 # Firmware
 $(call soong_config_set_bool,linux_firmware_mainline,use_product_specific_ath_board2,true)
 PRODUCT_PACKAGES += \
