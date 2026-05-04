@@ -13,7 +13,7 @@ define postinstall_dtbo_rule
 $(TARGET_OUT_PRODUCT_ETC)/firmware/${1}_dtbo.img: $(PRODUCT_OUT)/kernel $(MKDTBOIMG) $(AVBTOOL) $(productimage_intermediates)/file_list.txt
 	$(MKDTBOIMG) create $(TARGET_OUT_PRODUCT_ETC)/firmware/${1}_dtbo.img --page_size=$(BOARD_KERNEL_PAGESIZE) $(abspath $(KERNEL_OUT))/qcs8550-${2}-${1}.dtbo
 	$(AVBTOOL) add_hash_footer --image $(TARGET_OUT_PRODUCT_ETC)/firmware/${1}_dtbo.img $(call get-partition-size-argument,$(BOARD_${1}_DTBOIMG_PARTITION_SIZE)) --partition_name dtbo
-	$(hide) grep etc/firmware/${1}_dtbo.img $(productimage_intermediates)/file_list.txt > /dev/null 2>&1 || echo firmware/${1}_dtbo.img >> $(productimage_intermediates)/file_list.txt
+	$(hide) grep etc/firmware/${1}_dtbo.img $(productimage_intermediates)/file_list.txt > /dev/null 2>&1 || echo etc/firmware/${1}_dtbo.img >> $(productimage_intermediates)/file_list.txt
 
 $(TARGET_OUT_PRODUCT_EXECUTABLES)/ayn_bootloader_payload_updater: $(TARGET_OUT_PRODUCT_ETC)/firmware/${1}_dtbo.img
 
