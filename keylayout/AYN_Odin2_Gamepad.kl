@@ -21,7 +21,7 @@ key 0x137   BUTTON_R1
 key 158     BACK
 key 0x13a   BUTTON_SELECT
 key 0x13b   BUTTON_START
-key 0x13c   BUTTON_MODE
+key 102     HOME
 
 key 0x13d   BUTTON_THUMBL
 key 0x13e   BUTTON_THUMBR
@@ -34,8 +34,6 @@ axis 0x01   Y
 axis 0x03   Z
 axis 0x04   RZ
 
-# L2 trigger
-axis 0x02   LTRIGGER
-
-# R2 trigger
-axis 0x05   RTRIGGER
+# Triggers
+axis 0x0a   LTRIGGER
+axis 0x09   RTRIGGER
