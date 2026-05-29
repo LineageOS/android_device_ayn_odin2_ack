@@ -1,5 +1,6 @@
 ro.product.vendor.device=rp6
 ro.product.vendor.model=odin2
 ro.product.vendor.name=Pocket 6
+ro.surface_flinger.game_default_frame_rate_override=120
 vendor.usb.product_string=Pocket 6
 vendor.hwc.drm.DSI-1.edid_path=qcom/sm8550/retroidpocket/rp6/1080x1920.edid

@@ -75,7 +75,9 @@ PRODUCT_PACKAGES += \
 # SKU Specific Configs
 PRODUCT_PACKAGES += \
     PortalOverlay \
-    PortalSettingsOverlay
+    PortalSettingsOverlay \
+    RP6Overlay \
+    RP6SettingsOverlay
 
 # Unified device support
 $(call soong_config_set,libinit,vendor_init_lib,//device/ayn/odin2_ack:init_odin2)
