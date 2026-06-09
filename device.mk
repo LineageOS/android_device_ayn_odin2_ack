@@ -15,6 +15,7 @@ PRODUCT_SOONG_NAMESPACES += device/ayn/odin2_ack
 include device/ayn/qcs8550-ack/qcs8550.mk
 
 # Properties
+TARGET_SYSTEM_PROP += device/ayn/odin2_ack/properties/system.prop
 TARGET_VENDOR_PROP += device/ayn/odin2_ack/properties/vendor.prop
 
 PRODUCT_CHARACTERISTICS   := tv
@@ -78,7 +79,8 @@ PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
     ro.product.vendor.model \
     ro.product.vendor.name
 PRODUCT_COPY_FILES += \
-    $(foreach model,$(TARGET_MODELS),device/ayn/odin2_ack/properties/$(model).prop:$(TARGET_COPY_OUT_VENDOR)/etc/props/$(model).prop) \
+    $(foreach model,$(TARGET_MODELS),device/ayn/odin2_ack/properties/recovery/$(model).prop:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/props/$(model).prop) \
+    $(foreach model,$(TARGET_MODELS),device/ayn/odin2_ack/properties/vendor/$(model).prop:$(TARGET_COPY_OUT_VENDOR)/etc/props/$(model).prop) \
 
 # Updater
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)

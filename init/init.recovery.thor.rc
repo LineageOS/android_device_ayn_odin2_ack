@@ -6,11 +6,3 @@ import init.recovery.odin2_common.rc
 on init
     # Disable lower display
     write /sys/class/drm/card0-DSI-1/status off
-    setprop ro.minui.blacklist_input_devices "generic ft5452 (8d)"
-
-    # Set rotation for the primary display
-    setprop ro.minui.default_rotation ROTATION_RIGHT
-
-    # Enable backlight handling for the primary display
-    setprop ro.recovery.ui.brightness_file /sys/class/backlight/ae96000.dsi.0/brightness
-    setprop ro.recovery.ui.max_brightness_file /sys/class/backlight/ae96000.dsi.0/max_brightness

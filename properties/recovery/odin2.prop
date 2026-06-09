@@ -1,0 +1,7 @@
+ro.product.vendor.device=odin2
+ro.product.vendor.model=odin2
+ro.product.vendor.name=Odin 2
+vendor.usb.product_string=Odin 2
+ro.minui.default_rotation=ROTATION_RIGHT
+ro.recovery.ui.brightness_file=/sys/class/backlight/pwm-backlight/brightness
+ro.recovery.ui.max_brightness_file=/sys/class/backlight/pwm-backlight/max_brightness

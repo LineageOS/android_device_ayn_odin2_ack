@@ -2,11 +2,3 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import init.recovery.odin2_common.rc
-
-on init
-    # Set rotation for the primary display
-    setprop ro.minui.default_rotation ROTATION_LEFT
-
-    # Enable backlight handling for the primary display
-    setprop ro.recovery.ui.brightness_file /sys/class/backlight/pwm-backlight/brightness
-    setprop ro.recovery.ui.max_brightness_file /sys/class/backlight/pwm-backlight/max_brightness

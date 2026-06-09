@@ -1,0 +1,7 @@
+ro.product.vendor.device=rp6
+ro.product.vendor.model=odin2
+ro.product.vendor.name=Pocket 6
+vendor.usb.product_string=Pocket 6
+ro.minui.default_rotation=ROTATION_LEFT
+ro.recovery.ui.brightness_file=/sys/class/backlight/pwm-backlight/brightness
+ro.recovery.ui.max_brightness_file=/sys/class/backlight/pwm-backlight/max_brightness

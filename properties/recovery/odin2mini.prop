@@ -1,0 +1,7 @@
+ro.product.vendor.device=odin2mini
+ro.product.vendor.model=odin2
+ro.product.vendor.name=Odin 2 Mini
+vendor.usb.product_string=Odin 2 Mini
+ro.minui.default_rotation=ROTATION_RIGHT
+ro.recovery.ui.brightness_file=/sys/class/backlight/ae94000.dsi.0/brightness
+ro.recovery.ui.max_brightness_file=/sys/class/backlight/ae94000.dsi.0/max_brightness
