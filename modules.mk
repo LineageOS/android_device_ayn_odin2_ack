@@ -45,6 +45,11 @@ BOOT_KERNEL_MODULES += \
 BOOT_KERNEL_MODULES += \
     panel-chipwealth-ch13726a.ko
 
+## Nova
+# Copy to boot
+BOOT_KERNEL_MODULES += \
+    panel-ilitek-ili7836a.ko
+
 ## Retroid Pocket 6
 # Copy to boot
 BOOT_KERNEL_MODULES += \
@@ -57,6 +62,7 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := \
     lontium-lt8912b \
     panel-chipone-icna35xx \
     panel-chipwealth-ch13726a \
+    panel-ilitek-ili7836a \
     panel-synaptics-td4328 \
     panel-visionox-vtdr6130 \
     panel-xiamen-xm91080 \

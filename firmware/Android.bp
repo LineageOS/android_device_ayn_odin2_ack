@@ -114,6 +114,21 @@ pil_squasher {
 }
 
 pil_squasher {
+    name: "qcom-sm8550-retroidpocket-nova-adsp",
+    stem: "adsp.mbn",
+    mdt: "//vendor/ayn/odin2_ack:nova_adsp_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:nova_adsp"],
+    relative_install_path: "qcom/sm8550/retroidpocket/nova",
+}
+pil_squasher {
+    name: "qcom-sm8550-retroidpocket-nova-adsp-dtb",
+    stem: "adsp_dtb.mbn",
+    mdt: "//vendor/ayn/odin2_ack:nova_adsp_dtb_mdt",
+    srcs: ["//vendor/ayn/odin2_ack:nova_adsp_dtb"],
+    relative_install_path: "qcom/sm8550/retroidpocket/nova",
+}
+
+pil_squasher {
     name: "qcom-sm8550-retroidpocket-rp6-adsp",
     stem: "adsp.mbn",
     mdt: "//vendor/ayn/odin2_ack:rp6_adsp_mdt",
@@ -143,6 +158,8 @@ phony {
         "qcom-sm8550-ayn-odin2portal-adsp-dtb",
         "qcom-sm8550-ayn-thor-adsp",
         "qcom-sm8550-ayn-thor-adsp-dtb",
+        "qcom-sm8550-retroidpocket-nova-adsp",
+        "qcom-sm8550-retroidpocket-nova-adsp-dtb",
         "qcom-sm8550-retroidpocket-rp6-adsp",
         "qcom-sm8550-retroidpocket-rp6-adsp-dtb",
         "qcom-sm8550-ayn-cdsp.vendor_ramdisk",
@@ -155,6 +172,8 @@ phony {
         "qcom-sm8550-ayn-odin2portal-adsp-dtb.vendor_ramdisk",
         "qcom-sm8550-ayn-thor-adsp.vendor_ramdisk",
         "qcom-sm8550-ayn-thor-adsp-dtb.vendor_ramdisk",
+        "qcom-sm8550-retroidpocket-nova-adsp.vendor_ramdisk",
+        "qcom-sm8550-retroidpocket-nova-adsp-dtb.vendor_ramdisk",
         "qcom-sm8550-retroidpocket-rp6-adsp.vendor_ramdisk",
         "qcom-sm8550-retroidpocket-rp6-adsp-dtb.vendor_ramdisk",
     ],

@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-TARGET_MODELS ?= odin2 odin2mini odin2portal thor rp6
+TARGET_MODELS ?= nova odin2 odin2mini odin2portal thor rp6
 
 TARGET_HAS_VIBRATOR := false
 

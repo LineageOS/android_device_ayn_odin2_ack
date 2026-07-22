@@ -18,6 +18,7 @@ struct odin2_device {
 
 //        hardware         device   name           model
 static std::unordered_map<std::string, odin2_device> kOdin2Devices = {
+        { "nova",        { "odin2", "nova",        "Nova"          }},
         { "odin2",       { "odin2", "odin2",       "Odin 2"        }},
         { "odin2mini",   { "odin2", "odin2mini",   "Odin 2 Mini"   }},
         { "odin2portal", { "odin2", "odin2portal", "Odin 2 Portal" }},

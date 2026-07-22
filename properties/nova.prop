@@ -1,0 +1,4 @@
+ro.product.vendor.device=nova
+ro.product.vendor.model=odin2
+ro.product.vendor.name=Nova
+vendor.usb.product_string=Nova
