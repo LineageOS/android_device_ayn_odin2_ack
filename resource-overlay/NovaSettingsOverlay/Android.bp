@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "NovaSettingsOverlay",
+    theme: "NovaSettingsOverlay",
+    sdk_version: "current",
+    soc_specific: true
+}

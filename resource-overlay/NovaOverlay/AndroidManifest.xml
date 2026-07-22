@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.lineage.overlay.nova">
+    <application android:hasCode="false" />
+    <overlay android:targetPackage="android"
+             android:requiredSystemPropertyName="ro.hardware"
+             android:requiredSystemPropertyValue="nova"
+             android:isStatic="true"
+             android:priority="1" />
+</manifest>

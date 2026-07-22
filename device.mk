@@ -74,6 +74,9 @@ PRODUCT_PACKAGES += \
 
 # SKU Specific Configs
 PRODUCT_PACKAGES += \
+    NovaOverlay \
+    NovaOverlayATV \
+    NovaSettingsOverlay \
     PortalOverlay \
     PortalSettingsOverlay \
     RP6Overlay \
