@@ -6,6 +6,8 @@
 TARGET_MODELS ?= nova odin2 odin2mini odin2portal thor rp6
 
 TARGET_HAS_VIBRATOR := false
+TARGET_DRM_HWCOMPOSER_INSIDE_APEX   := false
+TARGET_MINIGBM_UPSTREAM_INSIDE_APEX := false
 
 AB_OTA_UPDATER := true
 

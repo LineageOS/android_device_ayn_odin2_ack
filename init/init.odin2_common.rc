@@ -3,6 +3,11 @@
 
 import /vendor/etc/init/hw/init.qcs8550.rc
 
+on late-init
+    # Start bootanimation class
+    start bootanim
+    class_start animation
+
 on early-boot
     wait /dev/snd/controlC0 10
 
